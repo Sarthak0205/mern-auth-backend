@@ -10,12 +10,8 @@ dotenv.config();
 const app = express();
 
 // CORS middleware (allow frontend to access backend)
-app.use(
-  cors({
-    origin: "http://localhost:3000", // your React app
-    credentials: false, // no cookies for now
-  })
-);
+app.use(cors());
+
 
 // Middleware
 app.use(express.json());
